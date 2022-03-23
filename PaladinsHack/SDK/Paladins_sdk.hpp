@@ -5,7 +5,7 @@
 namespace off {
 	constexpr auto GNames = 0x3787f7c;
 	constexpr auto GObjects = 0x3787fec;
-	constexpr auto Engine = 0x379d530; // 48 8B 0D ? ? ? ? 48 85 C9 0F 84 ? ? ? ? 48
+	constexpr auto Engine = 0x37d9a10; // 48 8B 0D ? ? ? ? 48 85 C9 0F 84 ? ? ? ? 48
 	constexpr auto DecryptionKey = 0x3ff;
 
 	namespace n_UUIComponent_DualButtonPanel { // : UUIComponent

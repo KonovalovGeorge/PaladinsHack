@@ -20,20 +20,20 @@
 
 bool tracersEnabled = false;
 bool aimbotEnabled = true;
-bool boxESPEnabled = true;
-bool hpESPEnabled = true;
-bool thirdPerson = false;
+bool boxESPEnabled = false;
+bool hpESPEnabled = false;
+bool thirdPerson = true;
 bool glowEnabled = true;
 bool noRecoil = true;
 bool noSpread = true;
-bool nameESP = true;
+bool nameESP = false;
 bool smoothing = true;
 bool lockWhenClose = true;
-float smoothingValue = 0.3f; // from 0-1
-bool isPredictionAim = true;
+float smoothingValue = 0.1f; // from 0-1
+bool isPredictionAim = false;
 bool useNvidiaOverlay = true; // change this if you have problems with overlay
 bool overrideFOV = true;
-float deafultFOV = 130.f; //106
+float deafultFOV = 106.f; //106
 
 
 struct Vec2
@@ -397,10 +397,10 @@ void Gamepad::Update()
 	m_State = GetState(); // Obtain current gamepad state
 }
 
-// Return value of left trigger
+// Return value of right trigger
 float Gamepad::RightTrigger()
 {
-	// Obtain value of left trigger
+	// Obtain value of right trigger
 	BYTE Trigger = m_State.Gamepad.bRightTrigger;
 
 	if (Trigger > XINPUT_GAMEPAD_TRIGGER_THRESHOLD)
